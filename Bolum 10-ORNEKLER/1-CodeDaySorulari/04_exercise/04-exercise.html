@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="04-exercise.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Library</h1>
+        <div class="book-list" id="book-list"></div>
+        <h2>Add a New Book</h2>
+        <form id="book-form">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="number" id="price" placeholder="Price" required>
+            <label for="inStock">In Stock:</label>
+            <input type="checkbox" id="inStock">
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+    <script src="04_exercise.js"></script>
+</body>
+</html>
