@@ -31,11 +31,11 @@ switch(not){
 }
 
 
-const not1='20';
+const not1=20;
 
 switch(not1){
 
-    case 20:
+    case '20':
     console.log('En basarili');
     break;
 

@@ -24,7 +24,7 @@ console.log(sayi);
 
 console.log(15/"Musti");
 
-console.log("Dersi"+sayi+"Defa tekrar ettim");
+console.log("Dersi "+sayi+" Defa tekrar ettim");
 
 let userInput=prompt("Please enter a number");//js bunu string ya da nulll olarak algilar
 

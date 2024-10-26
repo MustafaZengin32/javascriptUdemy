@@ -8,7 +8,7 @@ console.log(hatalar[0]);
 console.log(hatalar[1]);
 
 const paragraflar = document.getElementsByTagName('p');
-console.log(paragraflar);
+
 
 // HTMLCollection does not have a forEach method, so we need to convert it to an array
 Array.from(paragraflar).forEach(element => {

@@ -8,8 +8,6 @@ ogrencilerim.forEach(function ogrenci(kisi){
 
     htmlim=htmlim+`<li>${kisi}</li>`
 
-
-
 }
     );
 

@@ -1,11 +1,11 @@
 const hata1= document.querySelector('p');//Bu sekilde p etiketinin hepsini secmez sadece ilk p yi secer
-console.log(hata1);
+console.log(hata1);// <p>Musti</p>
 
 const hata2= document.querySelector('.error');
-console.log(hata2);
+console.log(hata2);// <p class="error">Hops</p>
 
 const hata3= document.querySelector('div.error');
-console.log(hata3);
+console.log(hata3);//    <div class="error">Dikkat Et</div>    
 
 const hata4= document.querySelectorAll('p');
 console.log(hata4);//Bu sekilde bir list gorunur

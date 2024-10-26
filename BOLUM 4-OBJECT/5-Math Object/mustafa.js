@@ -18,7 +18,7 @@ const rast=Math.random();
 
 console.log(rast);//Random 0 ila 1 arasinda bir sayi verir ornegin 0.81 // Biz kac basamakli istersek omla carpariz
 
-console.log(Math.round((Math.random())*100));
+console.log(Math.round((Math.random())*10));
 
 
 

@@ -1,7 +1,8 @@
 const pdegeri=document.querySelector('p');
+
 console.log(pdegeri);
 
-pdegeri.innerText='Mustafa bir Tester';
+pdegeri.innerText='Mustafa bir Tester';//text e erisir
 
 const pdegerleri=document.querySelectorAll('p');
 
@@ -11,6 +12,7 @@ pdegerleri.forEach(a => {
 });
 
 const icerik=document.querySelector('div.icerik');
+
 console.log(icerik);
 
 //innertext de sadece yazilari gunceller , ama innerhtml de html taglarini da gunceller

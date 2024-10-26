@@ -29,9 +29,9 @@ console.log(rast.length);
 
 let dash=isimler.join('-');
 
-console.log(dash);
+console.log(dash);//can-cansu-elif
 
-let comma=isimler.join(',');
+let comma=isimler.join(',');//can,cansu,elif
 
 console.log(comma);
 
