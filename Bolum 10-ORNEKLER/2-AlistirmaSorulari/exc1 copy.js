@@ -1,7 +1,9 @@
 /*
 Taks 1: Create a function that manages tasks.
-The function must accept a list of classes and filter them based on the completed property and return an object with two arrays (pending, completed) with the respective items.                                           javascript ile coz ve anlat
+The function must accept a list of classes and filter them based on the completed property and return an object with two arrays (pending, completed) with the respective items.                 
+
 */
+
 
 const tasks=[
 
@@ -13,33 +15,39 @@ const tasks=[
 ];
 
 
-const pend=[];
 
-const comp=[];
+function filterTask(tasks){
+
+let pending=[];
+
+let completed=[];
 
 
-tasks.forEach(a=>{
+    tasks.forEach(aa=>{
 
-    if(a.station===true){
+        if(aa.station===true){
 
-        comp.push(a.task);
-        
-        return a;
+            completed.push(aa);
+        }
+
+        else{
+
+            pending.push(aa);
+        }
+
     }
+    )
 
-    else{
+    return{
 
-        pend.push(a.task);
+            completed,
+    
+            pending
+        }
 
-        return a;
-    }
+    
 }
 
+const result=filterTask(tasks);
 
-
-);
-
-console.log("It is completed tasks: "+comp);
-
-
-console.log("It is pending tasks: "+pend);
+console.log(result);

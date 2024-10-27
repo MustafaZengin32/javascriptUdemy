@@ -7,42 +7,52 @@ doubles each nuber
 filters out numbers that are less than 22
 returns the sum of remaining numbers and the list of numbers that were removed.*/
 
-const arr1=[5,6,10,15,20];
+const arrNumbers = [10, 15, 3, 22, 13, 8, "powercoders", 30.5, 25];
 
-function processNumbers(arr1){
 
-    let remain=[];
+
+
+
+function processNumbers(arrNumbers){
 
     let removed=[];
 
+    let remain=[];
 
-    for(let i=0;i<arr1.length;i++){
+    
 
+    arrNumbers.forEach(aa=>{
 
-        if(Number.isInteger(arr1[i])){
+        if(Number.isInteger(aa)){
 
-            arr1[i]=arr1[i]*2;
+            aa=aa*2;
 
-            if(arr1[i]>22){
+            if(aa<22){
 
-                remain.push(arr1[i]);
+                removed.push(aa);
+
             }
 
             else{
 
-                removed.push(arr1[i]);
+                remain.push(aa);
             }
-
         }
+    });
+
+    return {
+
+        remain,
+        removed
     }
+} 
 
-    return { remain, removed };
+const result=processNumbers(arrNumbers);
 
-   
-}
+console.log(result);
 
-const result=processNumbers(arr1);
+//const arrNumbers = [10, 15, 3, 22, 13, 8, "powercoders", 30.5, 25];
 
-console.log("remain "+result.remain);
+//{ remain: [ 30, 44, 26, 50 ], removed: [ 20, 6, 16 ] }
 
-console.log("removed "+result.removed);
+

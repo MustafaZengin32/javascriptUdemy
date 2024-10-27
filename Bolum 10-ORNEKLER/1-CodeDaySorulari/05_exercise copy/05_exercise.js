@@ -19,22 +19,20 @@ Estimated time: 15 minutes <br>
 Total points: 15
 */
 
-const arr1=["Monday", "Thursday", "Saturday", "Wednesday", "Tuesday"];
+
 
 function getLastValue(arr1){
 
-   arr1.sort((a, b) =>
-        a.localeCompare(b, undefined, { sensitivity: "base" }));
+    arr1.sort();
 
-    console.log(arr1);
-
-    const lgt=arr1.length-1;
-
-    return arr1[lgt]
+    return arr1;
 
 }
 
+const arr1=["Monday", "Thursday", "Taursday","Tzursday","Saturday", "Wednesday", "Tuesday"];
 
-const result=getLastValue(arr1);
+const result=getLastValue(arr1)
 
 console.log(result);
+
+

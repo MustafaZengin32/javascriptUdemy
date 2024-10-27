@@ -19,19 +19,24 @@
 // **Total points: 15**
 
 
-let inputNbr=-1234;
+// let number=2345;
 
-function reverseNumber(inputNbr){
+// const rev=number.toString().split('').reverse().join('');
 
+// console.log(rev);
 
+let number=-1234;
 
-    let outputNbr=Math.abs(inputNbr).toString().split('').reverse().join('');
+function revrev(number){
 
+    const rev=Math.abs(number).toString().split('').reverse().join('');
 
-    return inputNbr<0 ? -Number(outputNbr) : Number(outputNbr);
-
+    return number<0 ? -Number(rev): Number(rev)
 }
 
-const result=reverseNumber(inputNbr);
+
+const result=revrev(number);
 
 console.log(result);
+
+

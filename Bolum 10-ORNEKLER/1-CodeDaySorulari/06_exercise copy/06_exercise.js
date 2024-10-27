@@ -18,54 +18,36 @@ Estimated time: 30 minutes<br>
 
 const dayday=[1,3,5];
 
+let newWeek=[];
+
+function weekNumbersToWords(dayday){
 
 
-function aa(dayday){
+    dayday.forEach(aa=>{
 
-return dayday.map(element=>{
+        switch(aa){
 
+            case 1:
+            return newWeek.push('Monday');
+            case 2:
+            return newWeek.push('Tuesday');
+            case 3:
+            return newWeek.push('Wednesday');
+            case 4:
+            return newWeek.push('Thursday');
+            case 5:
+            return newWeek.push('Friday');
+            case 6:
+            return newWeek.push('Saturday');
+            case 7:
+            return newWeek.push('Sunday');
+            default:
+            return "Bu deger yazilmadi"
+        }
+    })
 
-    switch(element){
-
-        case 1:
-
-        return dayday[dayday.indexOf(1)]='Pazartesi'
-
-        case 2:
-
-        return  dayday[dayday.indexOf(2)]='Sali'
-
-        case 3:
-
-        return dayday[dayday.indexOf(3)]='Carsamba'
-
-        case 4:
-
-        return dayday[dayday.indexOf(4)]='Persembe'
-
-        case 5:
-
-        return dayday[dayday.indexOf(5)]='Cuma'
-
-
-        case 6:
-
-        return dayday[dayday.indexOf(6)]='Cumartesi'
-        case 7:
-
-        return dayday[dayday.indexOf(7)]='Pazar'
-
-        default:
-
-        return 'It is not a number'
-
-    }
 }
 
-)
-}
+weekNumbersToWords(dayday);
 
-
-const result=aa(dayday);
-
-console.log(result);
+console.log(newWeek);

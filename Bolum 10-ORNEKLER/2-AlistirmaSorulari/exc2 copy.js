@@ -1,22 +1,15 @@
-/*
-Task 2: Guess a number program
-Create a program that picks a random number and let the user with the guessNumber function guess the number.
-The function must:
-validate the input type
-Track the number of guesses,
-return +1 when the number is higher
-return -1 when the number is smaller
-return 0 when the number is correct
-*/
+const random=Math.floor(Math.random()*10);
+
+function guessNumber(number){
 
 
-function control(inputNumber){
+    if(number>random){
 
-    if(inputNumber>random){
-        return 1;
+        return +1;
+
     }
 
-    else if(inputNumber<random){
+    else if(number<random){
 
         return -1;
 
@@ -29,55 +22,46 @@ function control(inputNumber){
 
 }
 
-const random=Math.floor(Math.random()*10);
 
-let deneme=0;
 
 do{
 
+    const number=Number(prompt("Please Enter You Number: "));
     
-    const inputNumber=Number(prompt("Please enter a number : ")); 
+    
+    
+    const result=guessNumber(number);
 
-    deneme++;
+    if(!isNaN(number)){
 
+        if(result===(+1)){
 
-   
+            console.log("High");
+            
+                console.log("Try AGAIN");
 
-    if(isNaN(inputNumber)){
-
-        console.log("Please enter a valid number again");
-
-        continue;
-
-
-
-    }
-
-    else{
-
-        const result=control(inputNumber);
-
-        if(result===0){
-            console.log("Congrats" +` ${deneme} sonunda buldun`);
-
-         
-
-            break;
         }
 
-        else if(result===1){
+        else if(result===(-1)){
 
-            console.log("Higher");
 
+            console.log("Low");
+            
+             console.log("Try AGAIN");
         }
 
         else{
 
-            console.log("Low");
+            console.log("Correct");
 
+            console.log(random +" ile "+number+" esittir kazandin");
+
+            break;
         }
 
+
     }
+
 
 }while(true);
 
