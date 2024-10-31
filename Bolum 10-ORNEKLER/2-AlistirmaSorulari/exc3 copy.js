@@ -9,17 +9,11 @@ returns the sum of remaining numbers and the list of numbers that were removed.*
 
 const arrNumbers = [10, 15, 3, 22, 13, 8, "powercoders", 30.5, 25];
 
+let removed=[];
 
-
-
+let remain=[];
 
 function processNumbers(arrNumbers){
-
-    let removed=[];
-
-    let remain=[];
-
-    
 
     arrNumbers.forEach(aa=>{
 
@@ -30,7 +24,6 @@ function processNumbers(arrNumbers){
             if(aa<22){
 
                 removed.push(aa);
-
             }
 
             else{
@@ -38,21 +31,19 @@ function processNumbers(arrNumbers){
                 remain.push(aa);
             }
         }
-    });
 
-    return {
+})
 
-        remain,
-        removed
-    }
-} 
+return {
+    remain,
+    removed
+}
 
-const result=processNumbers(arrNumbers);
+}
 
-console.log(result);
 
-//const arrNumbers = [10, 15, 3, 22, 13, 8, "powercoders", 30.5, 25];
+console.log(processNumbers(arrNumbers));
 
-//{ remain: [ 30, 44, 26, 50 ], removed: [ 20, 6, 16 ] }
+
 
 

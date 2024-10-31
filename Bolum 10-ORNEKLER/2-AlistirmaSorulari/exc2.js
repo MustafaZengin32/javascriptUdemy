@@ -10,56 +10,60 @@ return 0 when the number is correct
 */
 
 
-const random = Math.floor(Math.random() * 10);
+const random=Math.floor(Math.random()*10);
 
-function guessNumber(number) {
-    let counter = 0;
+function guessNumber(userGuess){
 
-    while (number !== random) {
-      
+    if(userGuess > random){
 
-        if (typeof number !== "number" || isNaN(number)) {
-            return "enter valid number";
-        }
-
-        counter++;
-
-        if (number > random) {
-
-            console.log("it is high! try again.");
-            return +1;
-
-        } else if (number < random) {
-
-            console.log("it is low! try again.");
-            return -1;
-        }
+        return +1
     }
 
-    console.log(`Congrats after ${counter} times you found the number!`);
+    else if(userGuess < random){
 
-    return 0;
-}
+        return -1;
 
-
-
-let userInput = prompt("gueess the number between 0-10");
-
-while (true) {
-
-    const numberInput = Number(userInput);
-
-    if (isNaN(numberInput)) {
-
-        console.log("please enter a valid number");
-
-    } else {
-
-        const result = guessNumber(numberInput);
-        
-        if (result === 0) break; 
     }
 
-    
-    userInput = prompt("please try again");
+    else{
+
+        return  0;
+    }
+
 }
+
+let userGuess;
+
+do{
+
+    userGuess = Number(prompt('enter guess number in order to find random : '));
+
+    let equality = guessNumber(userGuess);
+
+
+    if(equality===(+1)){
+
+        console.log('High');
+
+    }
+
+    else if(equality===(-1)){
+
+        console.log('Low');
+
+    }
+
+    else{
+
+        console.log('found it');
+        console.log("random number was : "+random);
+        break;
+    }
+
+
+
+    }while(true);
+
+
+
+

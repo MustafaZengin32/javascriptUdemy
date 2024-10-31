@@ -19,20 +19,19 @@ Estimated time: 15 minutes <br>
 Total points: 15
 */
 
-
-
 function getLastValue(arr1){
 
     arr1.sort();
 
-    return arr1;
+    return arr1[arr1.length-1];
+
+
 
 }
 
-const arr1=["Monday", "Thursday", "Taursday","Tzursday","Saturday", "Wednesday", "Tuesday"];
+arr1=["Monday", "Thursday", "Saturday", "Wednesday", "Tuesday"];
 
-const result=getLastValue(arr1)
+console.log(getLastValue(arr1));
 
-console.log(result);
 
 

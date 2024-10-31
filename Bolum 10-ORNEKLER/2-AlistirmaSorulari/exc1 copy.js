@@ -14,40 +14,30 @@ const tasks=[
 
 ];
 
-
-
-function filterTask(tasks){
-
 let pending=[];
 
 let completed=[];
 
+function aa (tasks){
 
-    tasks.forEach(aa=>{
+    tasks.forEach(xx=>{
 
-        if(aa.station===true){
+        if(xx.station===true){
 
-            completed.push(aa);
+            return completed.push(xx)
+
         }
-
         else{
 
-            pending.push(aa);
+            return pending.push(xx);
         }
-
-    }
-    )
+    })
 
     return{
-
-            completed,
-    
-            pending
-        }
-
-    
+        completed,
+        pending
+    }
 }
 
-const result=filterTask(tasks);
 
-console.log(result);
+console.log(aa(tasks));

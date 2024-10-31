@@ -18,25 +18,22 @@
 // Estimated time: 15 minutes <br>
 // **Total points: 15**
 
+let num=-1234;
 
-// let number=2345;
 
-// const rev=number.toString().split('').reverse().join('');
+function rev(num){
 
-// console.log(rev);
+    let rvs=Math.abs(num).toString().split('').reverse().join('');
 
-let number=-1234;
+    return reversedNum = num < 0 ? -Number(rvs) : Number(rvs);
 
-function revrev(number){
 
-    const rev=Math.abs(number).toString().split('').reverse().join('');
-
-    return number<0 ? -Number(rev): Number(rev)
 }
 
 
-const result=revrev(number);
+console.log(rev(num));
 
-console.log(result);
+
+
 
 
